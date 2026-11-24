@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<h1 class="retro-title"><%= categoria.nome %></h1>
+
+<div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+
+    <% if (jogos.length === 0) { %>
+    <p class="card-text text-center" style="color:#fff090;">Ainda não há jogos nesta categoria.</p>
+    <% } %>
+
+    <% jogos.forEach(jogo => { %>
+    <div class="col">
+      <div class="card retro-card">
+        <%- include('partials/favorito', { jogo }) %>
+        <a href="<%= jogo.url %>"><img src="<%= jogo.img %>"></a>
+        <div class="card-body retro-card-body">
+          <h5 class="card-title"><%= jogo.nome %></h5>
+          <p class="card-text"><%= jogo.desc %></p>
+          <a href="<%= jogo.url %>" class="btn btn-retro">Jogue agora</a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+
+  </div>
+</div>
+
+<script src="/js/favoritos.js"></script>

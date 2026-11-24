@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+
+body {
+  margin: 0;
+  background-color: #221;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1600px !important;
+  width: 100%;
+}
+
+.retro-title {
+  text-align: center;
+  color: #fff090;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4rem;
+
+  line-height: 5;
+
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 0;
+
+  display: inline-block;
+  transform: translateY(8px);
+
+
+}
+
+.retro-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+.retro-menu ol {
+  list-style: decimal;
+  margin: 0;
+  padding: 0;
+}
+
+.retro-menu a {
+  text-decoration: none;
+  color: #fff090;
+}
+
+.retro-menu li {
+  color: #4FAF44;
+}
+
+.retro-menu .arrow {
+  position: relative;
+  display: block;
+  color: #F6EB14;
+}
+
+.retro-menu .arrow i {
+  display: none;
+}
+
+.retro-menu .arrow:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.retro-menu .arrow:hover i {
+  display: block;
+  position: absolute;
+  top: 0.50em;
+  left: -6em;
+}
+
+/* cards retro */
+
+/* container do card */
+.retro-card {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+
+}
+
+.retro-card img {
+  width: 100%;
+  
+  aspect-ratio: 4/3.5;
+
+  display: block;
+  object-fit: cover;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.retro-card-body {
+  background-color: #f5f5dc !important;
+  width: 100%;
+  padding: 18px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* título centralizado, maior  com a fonte pixelada */
+.retro-card .card-title {
+  font-family: 'Press Start 2P', cursive;
+  color: #221;
+  font-size: 1.2rem;    
+  text-align: center;   
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+/* texto do card um pouco maior*/
+.retro-card .card-text {
+  font-family: 'VT323', monospace;
+  color: #2a2a2a;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+/* botão mantido o estilo retro */
+.btn-retro,
+.retro-card .btn-retro {
+  font-family: 'Press Start 2P';
+  font-size: 0.75rem;
+  background-color: #221;
+  color: #F6EB14;
+  border: 2px solid #000;
+  border-radius: 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+/* Efeito Hover do Botão */
+.btn-retro:hover,
+.retro-card .btn-retro:hover {
+  background-color: #F6EB14;
+  color: #221;
+  border-color: #221;
+}
+
+
+/* ===== página Sobre Mim ===== */
+
+
+/* foto à direita, com borda grossa em volta toda */
+.sobre-foto {
+  display: block;
+  width: 100%;
+  border: 8px solid #fff090;
+}
+
+/* textos no estilo dos cards, mas claros para o fundo escuro */
+.sobre-texto {
+  font-family: 'VT323', monospace;
+  color: #fff090;
+  font-size: 2.2rem;
+  line-height: 1.25;
+}
+
+/* "Olá, eu sou..." maior que o texto de baixo */
+.sobre-saudacao {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.sobre-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+/* seção "joguinhos do criador" */
+.sobre-jogos {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 4px solid #fff090;
+}
+
+.sobre-jogos-titulo {
+  font-family: 'Press Start 2P', cursive;
+  color: #fff090;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.sobre-jogos .btn-retro {
+  font-size: 1rem;
+  padding: 16px 24px;
+}
+
+
+/* ===== botão Voltar (vem do partials/header, em todas as telas menos o menu) ===== */
+.btn-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* ===== coração de favorito nos cards ===== */
+.btn-favorito {
+  position: absolute;
+  bottom: 22px; /* MUDOU AQUI: de top para bottom */
+  right: 22px;  /* MUDOU AQUI: ajustei pra 15px pra ficar alinhado com o padding do card */
+  z-index: 2;
+  width: 44px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-favorito:hover {
+  transform: scale(1.15);
+}
+
+.btn-favorito svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  shape-rendering: crispEdges;
+}
+
+.btn-favorito .coracao-borda {
+  fill: #000;
+}
+
+.btn-favorito .coracao-fill {
+  fill: #fff;
+  transition: fill 0.2s ease;
+}
+
+.btn-favorito.ativo .coracao-fill {
+  fill: #F6EB14;
+}

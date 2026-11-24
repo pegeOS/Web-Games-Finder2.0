@@ -1,0 +1,9 @@
+<button type="button" class="btn-favorito <%= jogo.favorito ? 'ativo' : '' %>" data-id="<%= jogo._id %>" aria-pressed="<%= jogo.favorito ? 'true' : 'false' %>" aria-label="Favoritar <%= jogo.nome %>">
+  <svg viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- Preenchimento (Coração interno) -->
+    <path class="coracao-fill" d="M1 2h2v1h-2z M4 2h2v1h-2z M1 3h5v1h-5z M2 4h3v1h-3z M3 5h1v1h-1z"/>
+    
+    <!-- Borda (Ajustada com o contorno do topo completo) -->
+    <path class="coracao-borda" d="M1 1h2v1h-2z M4 1h2v1h-2z M0 2h1v2h-1z M3 2h1v1h-1z M6 2h1v2h-1z M1 4h1v1h-1z M5 4h1v1h-1z M2 5h1v1h-1z M4 5h1v1h-1z M3 6h1v1h-1z"/>
+  </svg>
+</button>

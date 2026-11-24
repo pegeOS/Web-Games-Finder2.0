@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<h1 class="retro-title">Mais acessados</h1>
+
+<div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+
+    <% top.forEach(jogo => { %>
+    <div class="col">
+      <!-- Adicionado h-100 para alinhar a altura de todos os cards -->
+      <div class="card retro-card h-100">
+        <a href="<%= jogo.url %>"><img src="<%= jogo.img %>" class="card-img-top"></a>
+        
+        <!-- Adicionado d-flex e flex-column para manipular o layout interno -->
+        <div class="card-body retro-card-body d-flex flex-column">
+          <h5 class="card-title"><%= jogo.nome %></h5>
+          <p class="card-text"><%= jogo.desc %></p>
+          
+          <!-- mt-auto joga essa div pro final, justify-content-between separa os itens -->
+          <div class="mt-auto d-flex justify-content-between align-items-center">
+            <a href="<%= jogo.url %>" class="btn btn-retro">Jogue agora</a>
+            <%- include('partials/favorito', { jogo }) %>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <% }) %>
+
+  </div>
+</div>
+
+<script src="/js/favoritos.js"></script>
